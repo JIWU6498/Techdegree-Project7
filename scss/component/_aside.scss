@@ -1,3 +1,37 @@
 /* ============================================= */
 /*              Aside Layout                     */
 /* ============================================= */
+aside {
+   padding: 25px 0;
+
+   .nav {
+      display: flex;
+      flex-direction: row;
+      justify-content:space-around;
+
+      @include media-query-m($break-m) {
+         display: block;
+      }
+
+      li {
+         width: 100%;
+         @include media-query-m($break-m){
+            margin-bottom: 30px;
+         }
+        
+
+         &:hover {
+            border-left: 4px solid #81c98f;
+         }
+
+         .nav-icon{
+            width: 50px;
+            margin-left:20px;
+         }
+      }
+
+   }
+
+
+
+}

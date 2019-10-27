@@ -40,8 +40,8 @@ del,
 dfn,
 em,
 font,
-img,
 ins,
+img,
 kbd,
 q,
 s,
@@ -97,7 +97,7 @@ main {
 }
 
 aside {
-  background-color: #6ad78a;
+  background-color: #4d4c72;
 }
 
 footer {
@@ -182,6 +182,51 @@ header .setting .user-name {
 }
 
 /* ============================================= */
+/*              Aside Layout                     */
+/* ============================================= */
+aside {
+  padding: 25px 0;
+}
+
+aside .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media (min-width: 768px) {
+  aside .nav {
+    display: block;
+  }
+}
+
+aside .nav li {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  aside .nav li {
+    margin-bottom: 30px;
+  }
+}
+
+aside .nav li:hover {
+  border-left: 4px solid #81c98f;
+}
+
+aside .nav li .nav-icon {
+  width: 50px;
+  margin-left: 20px;
+}
+
+/* ============================================= */
 /*              Grid Layout                      */
 /* ============================================= */
 .grid-container {
@@ -190,13 +235,13 @@ header .setting .user-name {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
       grid-template-areas: "header" "aside" "main";
-  grid-auto-rows: minmax(150px, auto);
+  grid-auto-rows: minmax(80px, auto);
 }
 
 @media (min-width: 768px) {
   .grid-container {
-    -ms-grid-columns: 1fr 6fr;
-        grid-template-columns: 1fr 6fr;
+    -ms-grid-columns: 1fr 9fr;
+        grid-template-columns: 1fr 9fr;
     -ms-grid-rows: 80px minmax(1000px, auto);
         grid-template-rows: 80px minmax(1000px, auto);
         grid-template-areas: "header header" "aside main";
@@ -205,8 +250,8 @@ header .setting .user-name {
 
 @media (min-width: 1024px) {
   .grid-container {
-    -ms-grid-columns: 1fr 10fr;
-        grid-template-columns: 1fr 10fr;
+    -ms-grid-columns: 1fr 18fr;
+        grid-template-columns: 1fr 18fr;
   }
 }
 
