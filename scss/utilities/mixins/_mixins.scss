@@ -1,0 +1,17 @@
+@mixin media-query-s($break-s) {
+   @media (min-width:#{$break-s}) {
+      @content;
+   }
+}
+
+@mixin media-query-m($break-m) {
+   @media (min-width:#{$break-m}) {
+      @content;
+   }
+}
+
+@mixin media-query-l($break-l) {
+   @media (min-width:#{$break-l}) {
+      @content;
+   }
+}

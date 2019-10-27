@@ -1,0 +1,37 @@
+/* ============================================= */
+/*              Grid Layout                      */
+/* ============================================= */
+
+.grid-container {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-areas:
+      "header"
+      "aside"
+      "main";
+   grid-auto-rows: minmax(150px, auto);
+
+   @include media-query-m($break-m) {
+      grid-template-columns: 1fr 6fr;
+      grid-template-rows: 100px minmax(1000px, auto);
+      grid-template-areas:
+         "header header"
+         "aside main";
+   }
+
+   @include media-query-l($break-l) {
+      grid-template-columns: 1fr 10fr;
+   }
+}
+
+header {
+   grid-area: header;
+}
+
+aside {
+   grid-area: aside;
+}
+
+main {
+   grid-area: main;
+}
