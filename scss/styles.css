@@ -2,10 +2,10 @@
 /*              Base styles                      */
 /* ============================================= */
 * {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   color: white;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ol,
@@ -119,13 +119,14 @@ header {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
+
 header .logo {
   font-size: 1.5em;
   font-weight: bold;
@@ -144,10 +145,11 @@ header .setting {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
+
 header .setting li {
   height: 80px;
   padding-right: 15px;
@@ -165,6 +167,7 @@ header .setting .notification {
     border-right: 1px solid #fefefe;
   }
 }
+
 header .setting .profile-avatar {
   width: 50px;
   max-width: 100%;
@@ -185,26 +188,28 @@ header .setting .user-name {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
-  grid-template-areas: "header" "aside" "main";
+      grid-template-columns: 1fr;
+      grid-template-areas: "header" "aside" "main";
   grid-auto-rows: minmax(150px, auto);
 }
 
 @media (min-width: 768px) {
   .grid-container {
     -ms-grid-columns: 1fr 6fr;
-    grid-template-columns: 1fr 6fr;
+        grid-template-columns: 1fr 6fr;
     -ms-grid-rows: 80px minmax(1000px, auto);
-    grid-template-rows: 80px minmax(1000px, auto);
-    grid-template-areas: "header header" "aside main";
+        grid-template-rows: 80px minmax(1000px, auto);
+        grid-template-areas: "header header" "aside main";
   }
 }
+
 @media (min-width: 1024px) {
   .grid-container {
     -ms-grid-columns: 1fr 10fr;
-    grid-template-columns: 1fr 10fr;
+        grid-template-columns: 1fr 10fr;
   }
 }
+
 header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -222,7 +227,4 @@ main {
   -ms-grid-column: 1;
   grid-area: main;
 }
-
-/*# sourceMappingURL=styles.css.map */
-
 /*# sourceMappingURL=styles.css.map */

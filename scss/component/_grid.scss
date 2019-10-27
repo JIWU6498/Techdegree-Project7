@@ -13,7 +13,7 @@
 
    @include media-query-m($break-m) {
       grid-template-columns: 1fr 6fr;
-      grid-template-rows: 100px minmax(1000px, auto);
+      grid-template-rows: 80px minmax(1000px, auto);
       grid-template-areas:
          "header header"
          "aside main";
