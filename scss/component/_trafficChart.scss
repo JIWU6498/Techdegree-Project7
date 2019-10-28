@@ -2,29 +2,48 @@
 /*              Traffic Chart Styles             */
 /* ============================================= */
 #traffic {
-   height: 200px;
    text-align: center;
+   vertical-align: middle;
+   margin: 20px 20px;
 
    .traffic-header {
 
-      margin: 20px 15px;
+      margin: 30px 20px;
+      color: #676767;
+
+      @include media-query-m($break-m) {
+         display: flex;
+         justify-content: space-between;
+      }
 
       h3 {
-         color: #676767;
          font-weight: bold;
-         size: 2em;
+         height: 30px;
+         font-size: 1.4em;
+         font-weight: bold;
       }
 
       .traffic-nav {
+         margin: 0;
+         padding: 0;
+         display: inline-block;
 
-         .traffic-nav-link{
+         .traffic-nav-link {
             float: right;
-            width:70px;
-            height:30px;
-            color:white;
-            border-radius:15px;
-            background-color: #81c98f;
-            margin-left:20px;
+            width: 85px;
+            height: 30px;
+            line-height: 30px;
+            margin: 0 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+
+            &:hover {
+               color: white;
+               border-radius: 15px;
+               background-color: #81c98f;
+            }
+
+            @include media-query-m($break-m) {}
          }
       }
 
