@@ -373,19 +373,20 @@ main {
 /* ============================================= */
 /*              Traffic Chart Styles             */
 /* ============================================= */
-#traffic {
+.traffic {
   text-align: center;
   vertical-align: middle;
-  margin: 20px 20px;
+  margin: 20px 0 50px 0;
+  border-bottom: 0.8px solid #b2b2b2;
 }
 
-#traffic .traffic-header {
+.traffic .traffic-header {
   margin: 30px 20px;
   color: #676767;
 }
 
 @media (min-width: 768px) {
-  #traffic .traffic-header {
+  .traffic .traffic-header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -395,20 +396,20 @@ main {
   }
 }
 
-#traffic .traffic-header h3 {
+.traffic .traffic-header h3 {
   font-weight: bold;
   height: 30px;
   font-size: 1.4em;
   font-weight: bold;
 }
 
-#traffic .traffic-header .traffic-nav {
+.traffic .traffic-header .traffic-nav {
   margin: 0;
   padding: 0;
   display: inline-block;
 }
 
-#traffic .traffic-header .traffic-nav .traffic-nav-link {
+.traffic .traffic-header .traffic-nav .traffic-nav-link {
   float: right;
   width: 85px;
   height: 30px;
@@ -418,7 +419,7 @@ main {
   font-weight: bold;
 }
 
-#traffic .traffic-header .traffic-nav .traffic-nav-link:hover {
+.traffic .traffic-header .traffic-nav .traffic-nav-link:hover {
   color: white;
   border-radius: 15px;
   background-color: #81c98f;

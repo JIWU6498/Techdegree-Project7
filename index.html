@@ -70,7 +70,7 @@
 
          <!-- Chart widgets  -->
          <!-- Line Graph charts-->
-         <section id="traffic">
+         <section class="traffic">
             <div class="traffic-header">
                <h3>Traffic</h3>
                <ul class="traffic-nav clearfix">
@@ -81,11 +81,28 @@
                </ul>
             </div>
             <div class="widget-container-full">
-               <canvas id="traffic-chart"></canvas>
+               <canvas height="100px" id="traffic-chart"></canvas>
+            </div>
+         </section>
+         <!--Daily Traffic & Mobile Users-->
+
+         <!-- Bar Chart -->
+         <section class="bar-chart">
+            <h3>Daily Traffic</h3>
+            <div class="widget-container-half">
+               <canvas id="daily-chart"></canvas>
+            </div>
+         </section>
+         
+         <!-- Pie Chart -->
+         <section class="pie-chart">
+            <h3>Mobile Users</h3>
+            <div class="widget-container-half">
+               <canvas id="mobile-chart"></canvas>
             </div>
          </section>
 
-
+         <!-- Social Stats -->
       </main>
    </div>
 
