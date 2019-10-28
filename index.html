@@ -55,21 +55,36 @@
       </aside>
       <!-- Main -->
       <main>
-         <!-- Header --> 
+         <!-- Header -->
          <div class="main-header">
             <h2 class="headline">Dashboard</h2>
-            <div class="main-header-search">
-               <input class="searchBar" type="search" placeholder="Search..."/>
+            <div class="main-header-search clearfix">
+               <input class="searchBar" type="search" placeholder="Search..." />
             </div>
          </div>
 
-         <!-- Chart widgets -->
-         <!-- <div id="traffic">
-            <h1>Traffic</h1>
-            <canvas id="traffic-graph" width="80%">
-            </canvas>
-         </div> -->
-         <!--  -->
+         <!-- Alert Banner -->
+         <div class="alert">
+            <!-- JS -->
+         </div>
+
+         <!-- Chart widgets  -->
+         <!-- Line Graph charts-->
+         <section id="traffic">
+            <div class="traffic-header">
+               <h3>Traffic</h3>
+               <ul class="traffic-nav">
+                  <li class="traffic-nav-link">Hourly</li>
+                  <li class="traffic-nav-link">Daily</li>
+                  <li class="traffic-nav-link">Weekly</li>
+                  <li class="traffic-nav-link">Monthly</li>
+               </ul>
+            </div>
+            <div class="widget-container-full">
+               <canvas id="traffic-chart"></canvas>
+            </div>
+         </section>
+
 
       </main>
    </div>
@@ -106,7 +121,7 @@
 
    <!-- Import javaScript -->
    <script src="app.js"></script>
-   
+
 </body>
 
 </html>

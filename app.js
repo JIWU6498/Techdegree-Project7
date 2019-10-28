@@ -1,91 +1,45 @@
-// // Traffic Graph
-// const trafficGraph = document.getElementById('traffic-graph').getContext('2d');
-const chart = new Chart(trafficGraph, {
-   type: 'line',
+// Line Traffic Chart
+let trafficChart = document.getElementById('traffic-chart').getContext('2d');
 
-   data: {
-      labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
-      
-      datasets: [{
-         label:'Hourly',
-         data: [0, 500, 1000, 725, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500,2000],
-         backgroundColor: 'rgba(116,119,191,0.4)',
-         borderColor: 'rgba(116,119,191,1)',
-         borderWidth:2,
-         lineTension:0,
-         pointRadius:6,
-         pointBorderColor:'rgba(116,119,191,1)',
-         pointBackgroundColor:'white',
-         pointBorderWidth:'2',
-         fontColor:'red',
-         fontSize:'12',
-         fontFamily:'arial',
-      },{
-         label:'Daily',
-         data: [0, 500, 1000, 725, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500,2000],
-         backgroundColor: 'rgba(116,119,191,0.4)',
-         borderColor: 'rgba(116,119,191,1)',
-         borderWidth:2,
-         lineTension:0,
-         pointRadius:6,
-         pointBorderColor:'rgba(116,119,191,1)',
-         pointBackgroundColor:'white',
-         pointBorderWidth:'2',
-         fontColor:'red',
-         fontSize:'12',
-         fontFamily:'arial',
-       
-      },
-      {
-         label:'Weekly',
-         data: [0, 500, 1000, 725, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500,2000],
-         backgroundColor: 'rgba(116,119,191,0.4)',
-         borderColor: 'rgba(116,119,191,1)',
-         borderWidth:2,
-         lineTension:0,
-         pointRadius:6,
-         pointBorderColor:'rgba(116,119,191,1)',
-         pointBackgroundColor:'white',
-         pointBorderWidth:'2',
-         fontColor:'red',
-         fontSize:'12',
-         fontFamily:'arial',
-       
-      },
-      {
-         label:'Monthly',
-         data: [0, 500, 1000, 725, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500,2000],
-         backgroundColor: 'rgba(116,119,191,0.4)',
-         borderColor: 'rgba(116,119,191,1)',
-         borderWidth:2,
-         lineTension:0,
-         pointRadius:6,
-         pointBorderColor:'rgba(116,119,191,1)',
-         pointBackgroundColor:'white',
-         pointBorderWidth:'2',
-         fontColor:'red',
-         fontSize:'12',
-         fontFamily:'arial',
-       
-      }],
+let trafficData = {
+   labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+
+   datasets: [{
+      data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
+      backgroundColor: 'rgba(116,119,191,0.3)',
+      borderColor: 'rgba(116,119,191,1)',
+      borderWidth: 3,
+      lineTension: 0,
+      pointRadius: 6,
+      pointBorderColor: 'rgba(116,119,191,1)',
+      pointBackgroundColor: 'white',
+      pointBorderWidth: '2',
+      fontColor: 'red',
+      fontSize: '12',
+      fontFamily: 'arial',
+   }],
+}
+
+let trafficOptions = {
+   aspectRatio: 2.5,
+   animation: {
+      duration: 0
    },
-
-   // Configuration options go here
-   options: {
-      layout: {
-         padding: {
-            left: 20,
-            right: 20,
-            top: 20,
-            bottom: 20,
+   scales: {
+      yAxes: [{
+         ticks: {
+            beginAtZero: true
          }
-      },
-      legend: {
-         labels: {
-             fontColor: 'red',
-         }
-     }
-
-
+      }]
+   },
+   legend: {
+      display: false
    }
+}
+
+let drawTrafficChart = new Chart(trafficChart, {
+   type: 'line',
+   data: trafficData,
+   options: trafficOptions
 });
+

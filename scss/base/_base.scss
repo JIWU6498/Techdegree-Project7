@@ -4,7 +4,6 @@
 
 * {
    font-family: 'Source Sans Pro', sans-serif;
-   color:white;
    box-sizing: border-box;
 }
 
@@ -90,4 +89,10 @@ header {
 
 aside {
    background-color: #4d4c72;
+}
+
+.clearfix::after {
+   content: "";
+   clear: both;
+   display: table;
 }

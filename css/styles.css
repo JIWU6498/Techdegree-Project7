@@ -3,7 +3,6 @@
 /* ============================================= */
 * {
   font-family: "Source Sans Pro", sans-serif;
-  color: white;
   box-sizing: border-box;
 }
 
@@ -89,6 +88,12 @@ header {
 
 aside {
   background-color: #4d4c72;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 /* ============================================= */
@@ -278,6 +283,7 @@ main {
   border: 1px solid #e5e5e5;
   border-radius: 4px;
   float: right;
+  clear: both;
 }
 @media (min-width: 768px) {
   .main-header .main-header-search .searchBar {
@@ -288,6 +294,40 @@ main {
   .main-header .main-header-search .searchBar {
     width: 30%;
   }
+}
+
+/* ============================================= */
+/*              Alert Styles                     */
+/* ============================================= */
+.alert {
+  height: 70px;
+  border: 1px solid black;
+  display: none;
+}
+
+/* ============================================= */
+/*              Traffic Chart Styles             */
+/* ============================================= */
+#traffic {
+  height: 200px;
+  text-align: center;
+}
+#traffic .traffic-header {
+  margin: 20px 15px;
+}
+#traffic .traffic-header h3 {
+  color: #676767;
+  font-weight: bold;
+  size: 2em;
+}
+#traffic .traffic-header .traffic-nav .traffic-nav-link {
+  float: right;
+  width: 70px;
+  height: 30px;
+  color: white;
+  border-radius: 4px;
+  background-color: #81c98f;
+  margin-left: 50px;
 }
 
 /*# sourceMappingURL=styles.css.map */
