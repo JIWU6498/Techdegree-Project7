@@ -8,6 +8,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
    <link rel="stylesheet" href="css/styles.css">
    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 </head>
 
 <body>
@@ -53,8 +54,13 @@
          </ul>
       </aside>
       <!-- Main -->
-      <main>Main
-
+      <main>
+         <!-- Chart widgets -->
+         <div id="traffic">
+            <h1>Traffic</h1>
+            <canvas id="traffic-graph">
+            </canvas>
+         </div>
 
       </main>
    </div>
@@ -91,7 +97,7 @@
 
    <!-- Import javaScript -->
    <script src="app.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+   
 </body>
 
 </html>
