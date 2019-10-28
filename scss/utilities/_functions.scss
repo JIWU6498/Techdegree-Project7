@@ -1,0 +1,3 @@
+@function getMarginLeft($width){
+   @return round((100%-$width)/2);
+}

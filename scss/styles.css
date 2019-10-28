@@ -196,9 +196,8 @@ aside .nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 @media (min-width: 768px) {
@@ -209,21 +208,37 @@ aside .nav {
 
 aside .nav li {
   width: 100%;
+  padding-bottom: 15px;
 }
 
 @media (min-width: 768px) {
   aside .nav li {
     margin-bottom: 30px;
+    padding-bottom: 0;
   }
 }
 
-aside .nav li:hover {
-  border-left: 4px solid #81c98f;
+@media (min-width: 320px) {
+  aside .nav li:hover {
+    border-bottom: 4px solid #81c98f;
+  }
+}
+
+@media (min-width: 768px) {
+  aside .nav li:hover {
+    border-bottom: none;
+    border-left: 4px solid #81c98f;
+  }
 }
 
 aside .nav li .nav-icon {
-  width: 50px;
-  margin-left: 20px;
+  width: 60%;
+  margin: 0 20%;
+  fill: #b2b2b2;
+}
+
+aside .nav li .nav-icon:hover {
+  fill: white;
 }
 
 /* ============================================= */

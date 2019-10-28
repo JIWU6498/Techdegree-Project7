@@ -4,6 +4,7 @@
 * {
   font-family: "Source Sans Pro", sans-serif;
   color: white;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -110,10 +111,18 @@ header {
   text-align: center;
   color: white;
 }
+
 @media (min-width: 768px) {
   header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 }
@@ -122,13 +131,20 @@ header .logo {
   font-weight: bold;
   margin: 20px 20px;
 }
+
 header .setting {
   text-align: center;
   margin: 0 20px;
 }
+
 @media (min-width: 768px) {
   header .setting {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
@@ -136,12 +152,14 @@ header .setting li {
   height: 80px;
   padding-right: 15px;
 }
+
 header .setting .notification {
   vertical-align: 50%;
   width: 30px;
   max-width: 100%;
   margin: 25px 0;
 }
+
 @media (min-width: 768px) {
   header .setting .notification {
     border-right: 1px solid #fefefe;
@@ -153,6 +171,7 @@ header .setting .profile-avatar {
   border-radius: 50%;
   padding: 15px 0;
 }
+
 header .setting .user-name {
   vertical-align: center;
   font-size: 1.2em;
@@ -165,11 +184,19 @@ header .setting .user-name {
 aside {
   padding: 25px 0;
 }
+
 aside .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
+
 @media (min-width: 768px) {
   aside .nav {
     display: block;
@@ -177,52 +204,81 @@ aside .nav {
 }
 aside .nav li {
   width: 100%;
+  padding-bottom: 15px;
 }
+
 @media (min-width: 768px) {
   aside .nav li {
     margin-bottom: 30px;
+    padding-bottom: 0;
   }
 }
-aside .nav li:hover {
-  border-left: 4px solid #81c98f;
+@media (min-width: 320px) {
+  aside .nav li:hover {
+    border-bottom: 4px solid #81c98f;
+  }
+}
+@media (min-width: 768px) {
+  aside .nav li:hover {
+    border-bottom: none;
+    border-left: 4px solid #81c98f;
+  }
 }
 aside .nav li .nav-icon {
-  width: 50px;
-  margin-left: 20px;
+  width: 60%;
+  margin: 0 20%;
+  fill: #b2b2b2;
+}
+
+aside .nav li .nav-icon:hover {
+  fill: white;
 }
 
 /* ============================================= */
 /*              Grid Layout                      */
 /* ============================================= */
 .grid-container {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   grid-template-areas: "header" "aside" "main";
   grid-auto-rows: minmax(80px, auto);
 }
+
 @media (min-width: 768px) {
   .grid-container {
+    -ms-grid-columns: 1fr 9fr;
     grid-template-columns: 1fr 9fr;
+    -ms-grid-rows: 80px minmax(1000px, auto);
     grid-template-rows: 80px minmax(1000px, auto);
     grid-template-areas: "header header" "aside main";
   }
 }
 @media (min-width: 1024px) {
   .grid-container {
+    -ms-grid-columns: 1fr 18fr;
     grid-template-columns: 1fr 18fr;
   }
 }
-
 header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: header;
 }
 
 aside {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: aside;
 }
 
 main {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: main;
 }
+
+/*# sourceMappingURL=styles.css.map */
 
 /*# sourceMappingURL=styles.css.map */
