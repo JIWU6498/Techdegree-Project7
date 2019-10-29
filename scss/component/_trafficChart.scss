@@ -6,6 +6,10 @@
    vertical-align: middle;
    border-bottom: 0.8px solid #b2b2b2;
 
+   @include media-query-m($break-m) {
+      grid-column: 1 / span 2;
+   }
+
    .traffic-header {
       margin: 30px 20px;
 
@@ -38,8 +42,6 @@
                border-radius: 15px;
                background-color: #81c98f;
             }
-
-
          }
       }
    }
@@ -55,7 +57,7 @@
 
 .bar-chart,
 .pie-chart {
-   
+
    text-align: center;
    margin: 20px 0;
    border-bottom: 0.8px solid #b2b2b2;
@@ -67,14 +69,9 @@
 
    .widget-container-half {
       width: 95vw;
+
       @include media-query-m($break-m) {
          width: 45vw;
       }
    }
-
-   @include media-query-m($break-m) {
-     
-      grid-column: 1 /  span 2;
-   }
-
 }

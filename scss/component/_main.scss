@@ -3,35 +3,9 @@
 /* ============================================= */
 
 main {
-   display: grid ;
-   grid-template-areas:
-      "dashboard-header"
-      "traffic-lineChart"
-      "traffic-barChart"
-      "traffic-pieChart";
+   display: grid;
 
    @include media-query-m($break-m) {
-      grid-template-areas:
-         "dashboard-header"
-         "traffic-lineChart"
-         "traffic-barChart traffic-pieChart";
-      // grid-template-columns:50%;
+      grid-template-columns: 50%;
    }
-
-   .main-header {
-      grid-area: dashboard-header;
-   }
-
-   .traffic {
-      grid-area: traffic-lineChart;
-   }
-
-   .bar-chart {
-      grid-area: traffic-barChart;
-   }
-
-   .pie-chart {
-      grid-area: traffic-pieChart;
-   }
-
 }

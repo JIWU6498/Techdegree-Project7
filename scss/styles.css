@@ -299,6 +299,9 @@ main {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
   }
 }
 
@@ -373,6 +376,14 @@ main {
   text-align: center;
   vertical-align: middle;
   border-bottom: 0.8px solid #b2b2b2;
+}
+
+@media (min-width: 768px) {
+  .traffic {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+  }
 }
 
 .traffic .traffic-header {
@@ -458,51 +469,18 @@ main {
   }
 }
 
-@media (min-width: 768px) {
-  .bar-chart,
-  .pie-chart {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1 /  span 2;
-  }
-}
-
 /* ============================================= */
 /*              Main Grid Layouts                */
 /* ============================================= */
 main {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "dashboard-header" "traffic-lineChart" "traffic-barChart" "traffic-pieChart";
 }
 
 @media (min-width: 768px) {
   main {
-        grid-template-areas: "dashboard-header" "traffic-lineChart" "traffic-barChart traffic-pieChart";
+    -ms-grid-columns: 50%;
+        grid-template-columns: 50%;
   }
-}
-
-main .main-header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: dashboard-header;
-}
-
-main .traffic {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: traffic-lineChart;
-}
-
-main .bar-chart {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: traffic-barChart;
-}
-
-main .pie-chart {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: traffic-pieChart;
 }
 /*# sourceMappingURL=styles.css.map */
