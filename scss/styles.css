@@ -280,20 +280,6 @@ main {
   grid-area: main;
 }
 
-@media (min-width: 768px) {
-  main {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 1024px) {
-  main {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-}
-
 /* ============================================= */
 /*              Dashboard Header Styles          */
 /* ============================================= */
@@ -374,10 +360,7 @@ main {
   }
 }
 
-/* ============================================= */
-/*              Alert Styles                     */
-/* ============================================= */
-.alert {
+.main-header .alert {
   height: 70px;
   border: 1px solid black;
   display: none;
@@ -447,13 +430,15 @@ main {
   }
 }
 
-.traffic-detail {
+.bar-chart,
+.pie-chart {
   text-align: center;
   margin: 20px 0;
   border-bottom: 0.8px solid #b2b2b2;
 }
 
-.traffic-detail h3 {
+.bar-chart h3,
+.pie-chart h3 {
   color: #676767;
   height: 30px;
   font-size: 1.4em;
@@ -461,24 +446,63 @@ main {
   margin-bottom: 10px;
 }
 
-.traffic-detail .widget-container-half {
+.bar-chart .widget-container-half,
+.pie-chart .widget-container-half {
   width: 95vw;
 }
 
 @media (min-width: 768px) {
-  .traffic-detail .widget-container-half {
+  .bar-chart .widget-container-half,
+  .pie-chart .widget-container-half {
     width: 45vw;
   }
 }
 
 @media (min-width: 768px) {
-  .traffic-detail {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .bar-chart,
+  .pie-chart {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
-    grid-column: 1/span 2;
+    grid-column: 1 /  span 2;
   }
+}
+
+/* ============================================= */
+/*              Main Grid Layouts                */
+/* ============================================= */
+main {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "dashboard-header" "traffic-lineChart" "traffic-barChart" "traffic-pieChart";
+}
+
+@media (min-width: 768px) {
+  main {
+        grid-template-areas: "dashboard-header" "traffic-lineChart" "traffic-barChart traffic-pieChart";
+  }
+}
+
+main .main-header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: dashboard-header;
+}
+
+main .traffic {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: traffic-lineChart;
+}
+
+main .bar-chart {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: traffic-barChart;
+}
+
+main .pie-chart {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: traffic-pieChart;
 }
 /*# sourceMappingURL=styles.css.map */

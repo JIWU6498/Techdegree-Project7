@@ -46,15 +46,18 @@
 
    .widget-container-full {
       width: 95vw;
+
       @include media-query-m($break-m) {
          width: 90vw;
       }
    }
 }
 
-.traffic-detail {
+.bar-chart,
+.pie-chart {
+   
    text-align: center;
-   margin:20px 0;
+   margin: 20px 0;
    border-bottom: 0.8px solid #b2b2b2;
 
    h3 {
@@ -70,8 +73,8 @@
    }
 
    @include media-query-m($break-m) {
-      display: flex;
-      grid-column: 1/span 2;
+     
+      grid-column: 1 /  span 2;
    }
 
 }

@@ -54,21 +54,19 @@
          </ul>
       </aside>
       <!-- Main -->
-      <main>
-         <!-- Header -->
+      <main id="main">
+         <!-- Header Row1-->
          <div class="main-header">
             <h2 class="headline">Dashboard</h2>
             <div class="main-header-search clearfix">
                <input class="searchBar" type="search" placeholder="Search..." />
             </div>
+            <!-- Alert Banner -->
+            <div class="alert">
+               <!-- JS -->
+            </div>
          </div>
-
-         <!-- Alert Banner -->
-         <div class="alert">
-            <!-- JS -->
-         </div>
-
-         <!-- Chart widgets  -->
+         <!-- Chart widgets Row 2  -->
          <!-- Line Graph charts-->
          <section class="traffic">
             <div class="traffic-header">
@@ -84,24 +82,24 @@
                <canvas id="traffic-chart"></canvas>
             </div>
          </section>
-         <!--Daily Traffic & Mobile Users-->
-         <div class="traffic-detail">
-            <!-- Bar Chart -->
-            <section class="bar-chart">
-               <h3>Daily Traffic</h3>
-               <div class="widget-container-half">
-                  <canvas id="daily-chart"></canvas>
-               </div>
-            </section>
 
-            <!-- Pie Chart -->
-            <section class="pie-chart">
-               <h3>Mobile Users</h3>
-               <div class="widget-container-half">
-                  <canvas id="mobile-chart"></canvas>
-               </div>
-            </section>
-         </div>
+         <!--Daily Traffic & Mobile Users Row3-->
+         <!-- Bar Chart -->
+         <section class="bar-chart">
+            <h3>Daily Traffic</h3>
+            <div class="widget-container-half">
+               <canvas id="daily-chart"></canvas>
+            </div>
+         </section>
+
+         <!-- Pie Chart -->
+         <section class="pie-chart">
+            <h3>Mobile Users</h3>
+            <div class="widget-container-half">
+               <canvas id="mobile-chart"></canvas>
+            </div>
+         </section>
+
          <!-- Social Stats -->
       </main>
    </div>
