@@ -1,0 +1,75 @@
+/* ============================================= */
+/*              Social Stats Styles              */
+/* ============================================= */
+.social-stats {
+   margin:auto;
+   
+   @include media-query-m($break-m){
+      grid-column: 1/span 2;
+      text-align: left;
+   }
+
+   h3 {
+      @include h3-style;
+      margin-bottom:10px;
+      text-align: left;
+   }
+
+   .stats-wrapper{
+      @include media-query-m($break-m){
+         display: flex;
+         justify-content: space-evenly;
+         
+      }
+      .stats-container {
+         width: 300px;
+         height: 150px;
+         background-color: #fbfbfb;
+         border: 0.8px solid #b2b2b2;
+         border-radius: 5px;
+         display: flex;
+         justify-content: space-between;
+         margin:20px;
+         text-align: left;
+         .circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #4d4c72;
+            text-align: center;
+            margin: auto;
+   
+            .icon {
+               width: 50px;
+               height: 50px;
+               margin: 15px;
+               line-height: 80px;
+               fill: white;
+            }
+         }
+   
+         .data {
+            width: 60%;
+            height: 100%;
+            .wrapper {
+               margin:20px 0;
+               h4 {
+                  font-size: 1.2em;
+                  font-weight: bold;
+                  color: #4d4c72;
+                  padding: 20px 0 0 10px;
+               }
+   
+               h2 {
+                  font-size: 2.5em;
+                  color: #b2b2b2;
+                  padding: 0 10px;
+               }
+            }
+   
+         }
+      }
+   }
+
+   
+}
