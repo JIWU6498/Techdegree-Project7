@@ -4,23 +4,23 @@
 
 .grid-container {
    display: grid;
-   grid-template-columns: 1fr;
+   grid-template-columns: 100%;
+   grid-template-rows: auto;
    grid-template-areas:
       "header"
       "aside"
       "main";
-   grid-auto-rows: minmax(80px, auto);
+   
 
    @include media-query-m($break-m) {
-      grid-template-columns: 1fr 9fr;
-      grid-template-rows: 80px minmax(1000px, auto);
+      grid-template-columns: 60px 1fr;
       grid-template-areas:
          "header header"
          "aside main";
    }
 
    @include media-query-l($break-l) {
-      grid-template-columns: 1fr 18fr;
+      grid-template-columns: 80px 1fr;
    }
 }
 
@@ -34,4 +34,18 @@ aside {
 
 main {
    grid-area: main;
+}
+
+main{
+   // display: grid;
+   
+   
+   
+   @include media-query-m($break-m){
+      grid-template-columns: 1fr;
+   }
+   @include media-query-l($break-l){
+      grid-template-columns: 1fr;
+   }
+   
 }
