@@ -742,6 +742,130 @@ main {
   background-color: #7477bf;
 }
 
+/* ============================================= */
+/*              Settings Styles                  */
+/* ============================================= */
+.settings {
+  padding: 10px 0;
+}
+
+.settings h3 {
+  color: #676767;
+  height: 30px;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 0 20px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .settings h3 {
+    text-align: left;
+  }
+}
+.settings .setting-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.settings .setting-wrapper h4 {
+  font-size: 1em;
+  color: #b2b2b2;
+  padding-right: 20px;
+}
+
+.settings .setting-wrapper .onoffswitch {
+  position: relative;
+  width: 100px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.settings .setting-wrapper .onoffswitch .onoffswitch-checkbox {
+  display: none;
+}
+
+.settings .setting-wrapper .onoffswitch .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+.settings .setting-wrapper .onoffswitch .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+.settings .setting-wrapper .onoffswitch .onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #b2b2b2;
+  border-radius: 20px;
+}
+
+.settings .setting-wrapper .onoffswitch .onoffswitch-label .onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.settings .setting-wrapper .onoffswitch .onoffswitch-label .onoffswitch-inner:before, .settings .setting-wrapper .onoffswitch .onoffswitch-label .onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.settings .setting-wrapper .onoffswitch .onoffswitch-label .onoffswitch-inner:before {
+  content: "ON";
+  padding-left: 10px;
+  background-color: #7477bf;
+  color: #FFFFFF;
+}
+
+.settings .setting-wrapper .onoffswitch .onoffswitch-label .onoffswitch-inner:after {
+  content: "OFF";
+  padding-right: 10px;
+  background-color: #EEEEEE;
+  color: #999999;
+  text-align: right;
+}
+
+.settings .setting-wrapper .onoffswitch .onoffswitch-label .onoffswitch-inner .onoffswitch-switch {
+  display: block;
+  width: 18px;
+  margin: 6px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 56px;
+  border: 2px solid #b2b2b2;
+  border-radius: 20px;
+  -webkit-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
+
 /*# sourceMappingURL=styles.css.map */
 
 /*# sourceMappingURL=styles.css.map */
