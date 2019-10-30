@@ -16,7 +16,7 @@
    }
 }
 
-@mixin h3-style{
+@mixin h3-style {
    color: #676767;
    height: 30px;
    font-size: 1.4em;
@@ -27,4 +27,12 @@
    display: block;
    margin-left: auto;
    margin-right: auto;
+}
+
+@mixin input-style {
+   width: 80%;
+   box-sizing: border-box;
+   padding: 5px 10px;
+   border: 1px solid #e5e5e5;
+   border-radius: 4px;
 }

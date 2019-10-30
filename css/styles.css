@@ -686,6 +686,62 @@ main {
   font-size: 0.8em;
 }
 
+/* ============================================= */
+/*              Traffic Chart Styles             */
+/* ============================================= */
+.message-users {
+  padding: 10px 0;
+  text-align: center;
+  border-right: 0.8px solid #b2b2b2;
+  border-bottom: 0.8px solid #b2b2b2;
+}
+
+.message-users h3 {
+  color: #676767;
+  height: 30px;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .message-users h3 {
+    text-align: left;
+  }
+}
+.message-users .searchForUser {
+  width: 80%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  background-color: #fbfbfb;
+  margin: 20px 0;
+  padding: 10px 10px;
+  width: 90%;
+}
+
+.message-users #messageBox {
+  width: 80%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  background-color: #fbfbfb;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.message-users #sbtButton {
+  color: white;
+  width: 90%;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #7477bf;
+}
+
 /*# sourceMappingURL=styles.css.map */
 
 /*# sourceMappingURL=styles.css.map */

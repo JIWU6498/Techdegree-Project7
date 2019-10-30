@@ -34,12 +34,8 @@
       }
 
       .searchBar {
-         width: 80%;
-         box-sizing: border-box;
-         padding: 5px 10px;
-         border: 1px solid #e5e5e5;
-         border-radius: 4px;
          
+         @include input-style;
 
          @include media-query-m($break-m) {
             width: 50%;
