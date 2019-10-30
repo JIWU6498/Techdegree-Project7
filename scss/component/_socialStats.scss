@@ -2,75 +2,88 @@
 /*              Social Stats Styles              */
 /* ============================================= */
 .social-stats {
-   // margin:auto;
-   
-   @include media-query-m($break-m){
+   padding: 10px 0;
+   text-align: center;
+
+   @include media-query-m($break-m) {
       grid-column: 1/span 2;
       text-align: left;
    }
 
    h3 {
       @include h3-style;
-      margin-bottom:10px;
-      text-align: left;
+      padding: 0 20px;
+      margin-bottom: 10px;
    }
 
-   .stats-wrapper{
-      @include media-query-m($break-m){
-         display: flex;
-         justify-content: space-evenly;
+   .stats-wrapper {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      
+      @include media-query-m($break-m) {
+       
+         flex-direction: row;
          
       }
+
       .stats-container {
-         width: 300px;
-         height: 150px;
+         width: 250px;
+         height: 100px;
          background-color: #fbfbfb;
          border: 0.8px solid #b2b2b2;
          border-radius: 5px;
+         margin-bottom: 20px;
          display: flex;
          justify-content: space-between;
-         // margin:20px;
-         text-align: left;
+        
+
+         @include media-query-m($break-m) {
+            width: 25%;
+
+         }
+
          .circle {
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            background-color: #4d4c72;
+            background-color: #7477bf;
             text-align: center;
             margin: auto;
-   
+
             .icon {
-               width: 50px;
-               height: 50px;
-               // margin: 15px;
-               // padding:15px;
+               width: 40px;
+               height: 40px;
+               margin: 20px;
                line-height: 80px;
                fill: white;
             }
          }
-   
+
          .data {
             width: 60%;
             height: 100%;
+
             .wrapper {
-               // margin:20px 0;
                h4 {
                   font-size: 1.2em;
-                  font-weight: bold;
                   color: #4d4c72;
                   padding: 20px 0 0 10px;
                }
-   
+
                h2 {
                   font-size: 2.5em;
+                  font-weight: normal;
                   color: #b2b2b2;
                   padding: 0 10px;
                }
             }
-   
+
          }
       }
    }
 
-   
+
 }
