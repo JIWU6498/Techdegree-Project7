@@ -4,7 +4,7 @@
 .social-stats {
    padding: 10px 0;
    text-align: center;
-
+   border-bottom: 0.8px solid #b2b2b2;
    @include media-query-m($break-m) {
       grid-column: 1/span 2;
       text-align: left;
