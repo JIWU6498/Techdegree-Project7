@@ -1,3 +1,7 @@
+//Set global font value
+Chart.defaults.global.defaultFontColor = '#b2b2b2';
+Chart.defaults.global.defaultFontFamily="'Source Sans Pro', sans-serif";
+Chart.defaults.global.defaultFontSize='14';
 // Line Traffic Chart
 let lineChart = document.getElementById('traffic-chart').getContext('2d');
 
@@ -13,10 +17,7 @@ let lineChartData = {
       pointRadius: 6,
       pointBorderColor: 'rgba(116,119,191,1)',
       pointBackgroundColor: 'white',
-      pointBorderWidth: '2',
-      fontColor: 'red',
-      fontSize: '12',
-      fontFamily: 'arial',
+      pointBorderWidth: '3',
    }],
 }
 
@@ -28,13 +29,22 @@ let lineChartOptions = {
    scales: {
       yAxes: [{
          ticks: {
-            beginAtZero: true
+            beginAtZero:true
          }
       }]
    },
    legend: {
-      display: false
-   }
+      display: false,
+   }, 
+   layout: {
+      padding: {
+         left: 20,
+         right: 20,
+         top: 20,
+         bottom: 20,
+      }
+   },
+  
 }
 
 let drawLineChart = new Chart(lineChart, {

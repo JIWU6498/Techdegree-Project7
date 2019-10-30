@@ -4,7 +4,7 @@
 
 main {
    display: grid;
-
+   box-sizing: border-box;
    @include media-query-m($break-m) {
       grid-template-columns: 50%;
    }

@@ -3,7 +3,6 @@
 /* ============================================= */
 .traffic {
    text-align: center;
-   // vertical-align: middle;
    border-bottom: 0.8px solid #b2b2b2;
 
    @include media-query-m($break-m) {
@@ -11,26 +10,29 @@
    }
 
    .traffic-header {
-      margin: 20px;
+      padding: 20px;
 
       h3 {
          @include h3-style;
       }
 
       .traffic-nav {
-         // margin: 0;
-         // padding: 0;
+
          display: inline-block;
          color: #676767;
 
          .traffic-nav-link {
-            float: right;
+            text-align: center;
             width: 85px;
             height: 30px;
             line-height: 30px;
-            margin: 0 5px;
+            margin: 0 2.5px;
             font-size: 1.2em;
             font-weight: bold;
+
+            @include media-query-m($break-m) {
+               float: right;
+            }
 
             &:hover {
                color: white;
@@ -48,33 +50,46 @@
 
    .widget-container-full {
       width: 95vw;
-      margin:auto;
+      box-sizing: border-box;
+      margin: auto;
+
       @include media-query-m($break-m) {
          width: 90vw;
       }
    }
 }
 
+.bar-chart {
+   @include media-query-m($break-m) {
+      border-right: 0.8px solid #b2b2b2;
+   }
+}
+
 .bar-chart,
 .pie-chart {
    text-align: center;
-   margin: 20px 0;
-   padding:10px;
+   padding: 10px 0;
    border-bottom: 0.8px solid #b2b2b2;
-   @include media-query-m($break-m){
-      border:0.8px solid #b2b2b2;
+
+   @include media-query-m($break-m) {
+      border-top: 0;
+      border-bottom: 0.8px solid #b2b2b2;
    }
+
    h3 {
       @include h3-style;
       margin-bottom: 10px;
-      @include media-query-m($break-m){
+      padding: 0 20px;
+
+      @include media-query-m($break-m) {
          text-align: left;
       }
    }
 
    .widget-container-half {
       width: 95vw;
-      margin:auto;
+      margin: auto;
+
       @include media-query-m($break-m) {
          width: 45vw;
       }
