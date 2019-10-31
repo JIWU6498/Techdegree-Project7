@@ -1,9 +1,46 @@
+/* ============================================= */
+/*              Alert Box Styles             */
+/* ============================================= */
 #alert {
+   
    text-align: center;
    margin:auto;
    width:90%;
    color:white;
-   padding:10px 10px;
-   font-size: 1em;
+   padding:10px 20px;
+   vertical-align: middle;
+   font-size: 1.2em;
    background-color: #7477bf;
+   border-radius: 5px;
+   
+   @include media-query-m($break-m){
+      grid-column: 1/span 2;
+      width: 90%;
+      margin-top:20px;
+   }
+   .alert-banner{
+      position: relative;
+      .alert-banner-close{
+        
+         width:20px;
+         height:20px;
+         line-height: 20px;
+         vertical-align: middle;
+         border-radius: 50%;
+         background-color:#b2b2b2;
+         position: absolute;
+         right:0;
+         top:0;
+         
+      }
+   }
+}
+
+#notification{
+   width:200px;
+   height:200px;
+   background-color: #b2b2b2;
+   display:none;
+   position: absolute;
+   z-index: 1;
 }

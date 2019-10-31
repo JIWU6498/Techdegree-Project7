@@ -136,16 +136,22 @@ header .right-wrapper {
   justify-content: flex-end;
 }
 
+header .right-wrapper .setting:hover {
+  fill: yellow;
+}
+
 header .right-wrapper .setting .bell {
+  width: 30px;
   height: 30px;
   max-width: 100%;
   margin: 25px 0;
   padding-right: 5px;
-  border-right: 1px solid #fefefe;
+  border-right: 1px solid #4d4c72;
+  fill: white;
 }
 
-header .right-wrapper .setting #notification {
-  display: none;
+header .right-wrapper .setting .bell:hover {
+  fill: yellow;
 }
 
 header .right-wrapper .profile-avatar {
@@ -949,14 +955,53 @@ main {
   background-color: #b2b2b2;
 }
 
+/* ============================================= */
+/*              Alert Box Styles             */
+/* ============================================= */
 #alert {
   text-align: center;
   margin: auto;
   width: 90%;
   color: white;
-  padding: 10px 10px;
-  font-size: 1em;
+  padding: 10px 20px;
+  vertical-align: middle;
+  font-size: 1.2em;
   background-color: #7477bf;
+  border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  #alert {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/span 2;
+    width: 90%;
+    margin-top: 20px;
+  }
+}
+#alert .alert-banner {
+  position: relative;
+}
+
+#alert .alert-banner .alert-banner-close {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: #b2b2b2;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#notification {
+  width: 200px;
+  height: 200px;
+  background-color: #b2b2b2;
+  display: none;
+  position: absolute;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */

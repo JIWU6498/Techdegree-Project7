@@ -162,3 +162,20 @@ alert.addEventListener('click', e => {
       alert.style.display = "none";
    }
 });
+
+//Alert Bell
+const alertNotification=document.getElementById('notification');
+const alertBell=document.getElementById('alertBell');
+console.log(alertBell);
+alertNotification.innerHTML=`
+   <ul>
+      <li>You have 6 unread messages<p>X</p></li>
+      <li>You have 3 new followers<p>X</p></li>
+      <li>Your password expires in 7 days<p>X</p></li>
+   </ul>
+`
+// alertBell.addEventListener('hover',e=>{
+//    console.log(alertBell);
+//    e.style.backgroundColor="blue";
+// })
+

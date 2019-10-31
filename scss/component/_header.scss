@@ -23,17 +23,23 @@ header {
       justify-content: flex-end;
 
       .setting {
-         .bell {
+         &:hover{
+            fill:yellow;
+         }
+         .bell{
+            width:30px;
             height: 30px;
             max-width: 100%;
             margin: 25px 0;
             padding-right: 5px;
-            border-right: 1px solid #fefefe;
+            border-right: 1px solid #4d4c72;
+            fill:white;
+            &:hover{
+               fill:yellow;
+            }
          }
 
-         #notification {
-            display: none;
-         }
+         
       }
 
       .profile-avatar {
