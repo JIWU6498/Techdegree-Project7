@@ -217,8 +217,38 @@ function alertBellListener() {
             }
          })
       }
-   } 
+   }
 }
 
-
 alertBellListener();
+
+
+// Message User Widget
+// $(function () {
+//    var userName = [
+//       "Andrew",
+//       "Anna",
+//       "Bowen",
+//       "Caroline",
+//       "Cherk",
+//       "Esssi",
+//       "Fox",
+//       "God",
+//       "Hanna",
+//       "Jenny",
+//       "Jessi",
+//       "Leo",
+//       "Peter",
+//       "Photo",
+//       "Rio",
+//       "Selena",
+//       "Steven"
+//    ];
+//    $("#user").autocomplete({
+//       source: userName
+//    });
+// });
+const sendButton = document.getElementById('sbtButton');
+sendButton.addEventListener('click', e => {
+
+});

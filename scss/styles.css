@@ -97,6 +97,10 @@ aside {
   display: table;
 }
 
+.ui-menu-item {
+  background-color: white;
+}
+
 /* ============================================= */
 /*              Header Styles                    */
 /* ============================================= */
@@ -562,6 +566,7 @@ main {
 @media (min-width: 768px) {
   .social-stats .stats-wrapper .stats-container {
     width: 25%;
+    min-width: 220px;
   }
 }
 
@@ -1025,8 +1030,15 @@ main {
   border-radius: 50%;
   background-color: #b2b2b2;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: -30px;
+  top: -20px;
+}
+
+@media (min-width: 768px) {
+  #alert .alert-banner .alert-banner-close {
+    right: 0;
+    top: 0;
+  }
 }
 
 #notification {

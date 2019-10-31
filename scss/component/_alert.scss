@@ -32,8 +32,13 @@
          border-radius: 50%;
          background-color: #b2b2b2;
          position: absolute;
-         right: 0;
-         top: 0;
+         
+         right: -30px;
+         top: -20px;
+         @include media-query-m($break-m){
+            right:0;
+            top:0;
+         }
 
       }
    }
