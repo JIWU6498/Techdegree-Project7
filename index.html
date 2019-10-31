@@ -29,24 +29,32 @@
       <aside>
          <ul class="nav">
             <li>
-               <svg width="50" height="50" class="nav-icon">
-                  <use xlink:href="#dashboard" />
-               </svg>
+               <a>
+                  <svg width="50" height="50" class="nav-icon">
+                     <use xlink:href="#dashboard" />
+                  </svg>
+               </a>
             </li>
             <li>
-               <svg width="50" height="50" class="nav-icon">
-                  <use xlink:href="#member" />
-               </svg>
+               <a>
+                  <svg width="50" height="50" class="nav-icon">
+                     <use xlink:href="#member" />
+                  </svg>
+               </a>
             </li>
             <li>
-               <svg width="50" height="50" class="nav-icon">
-                  <use xlink:href="#visits" />
-               </svg>
+               <a>
+                  <svg width="50" height="50" class="nav-icon">
+                     <use xlink:href="#visits" />
+                  </svg>
+               </a>
             </li>
             <li>
-               <svg width="50" height="50" class="nav-icon">
-                  <use xlink:href="#settings" />
-               </svg>
+               <a>
+                  <svg width="50" height="50" class="nav-icon">
+                     <use xlink:href="#settings" />
+                  </svg>
+               </a>
             </li>
          </ul>
       </aside>
@@ -58,9 +66,10 @@
             <div class="main-header-search clearfix">
                <input class="searchBar" type="search" placeholder="Search..." />
             </div>
-            <!-- Alert Banner -->
-            <div class="alert"></div>
+
          </div>
+         <!-- Alert Banner -->
+         <div id="alert"></div>
          <!-- Chart widgets Row 2  -->
          <!-- Line Graph charts-->
          <section class="traffic">
@@ -235,32 +244,51 @@
          <!-- Message Users -->
          <section class="message-users">
             <h3>MESSAGE USERS</h3>
-            <input type="text" class="searchForUser" placeholder="Search for User"></input>
-            <textarea id="messageBox" rows="7"></textarea>
-            <button id="sbtButton" type="submit">Send</button>
+            <form class="widget-container">
+               <input type="text" class="searchForUser" placeholder="Search for User"></input>
+               <textarea id="messageBox" placeholder="Message for user" rows="7"></textarea>
+               <button id="sbtButton" type="submit">Send</button>
+            </form>
          </section>
          <!-- Settings-->
          <section class="settings">
             <h3>SETTINGS</h3>
-            <div class="setting-wrapper">
-               <h4>Send Email Notification</h4>
-               <div class="onoffswitch">
-                  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                  <label class="onoffswitch-label" for="myonoffswitch">
-                     <span class="onoffswitch-inner"></span>
-                     <span class="onoffswitch-switch"></span>
-                  </label>
+            <div class="overall-wrapper">
+               <div class="setting-wrapper">
+                  <h4>Send Email Notification</h4>
+                  <div class="onoffswitch">
+                     <input type="checkbox" name="onoffswitch1" class="onoffswitch-checkbox1" id="myonoffswitch1"
+                        checked>
+                     <label class="onoffswitch-label" for="myonoffswitch1">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                     </label>
+                  </div>
                </div>
-
-               <div class="onoffswitch">
-                  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                  <label class="onoffswitch-label" for="myonoffswitch">
-                     <span class="onoffswitch-inner"></span>
-                     <span class="onoffswitch-switch"></span>
-                  </label>
+               <div class="setting-wrapper">
+                  <h4>Set Profile to Public&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                  <div class="onoffswitch">
+                     <input type="checkbox" name="onoffswitch2" class="onoffswitch-checkbox2" id="myonoffswitch2"
+                        checked>
+                     <label class="onoffswitch-label" for="myonoffswitch2">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                     </label>
+                  </div>
                </div>
-               
             </div>
+
+            <form class="">
+               <select id="timezone" name="timezone" class="timezone ">
+                  <option value="">Select Timezone</option>
+                  <option value="PTC">8:00</option>
+                  <option value="UTC">7:00</option>
+               </select>
+               <div class="button-wrapper">
+                  <button id="save" type="submit">Save</button>
+                  <button id="cancel">Cancel</button>
+               </div>
+            </form>
          </section>
       </main>
    </div>
