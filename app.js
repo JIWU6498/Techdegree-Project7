@@ -157,25 +157,68 @@ alert.innerHTML =
    </div>
    `
 alert.addEventListener('click', e => {
-   const element = e.target;
+   let element = e.target;
    if (element.classList.contains("alert-banner-close")) {
       alert.style.display = "none";
    }
 });
 
 //Alert Bell
-const alertNotification=document.getElementById('notification');
-const alertBell=document.getElementById('alertBell');
-console.log(alertBell);
-alertNotification.innerHTML=`
-   <ul>
-      <li>You have 6 unread messages<p>X</p></li>
-      <li>You have 3 new followers<p>X</p></li>
-      <li>Your password expires in 7 days<p>X</p></li>
+const alertNotification = document.getElementById('notification');
+const alertBell = document.getElementById('alertBell');
+
+alertNotification.innerHTML = `
+   <ul class="alertNav">
+   <li class="alertList">
+      <div class="mark-wrapper">
+         <p class="greenMark"></p>
+         <div>
+            You have 6 unread messages
+         </div>
+      </div>
+      <p class="alert-list-close">X</p>
+   </li>
+   <li class="alertList">
+      <div class="mark-wrapper">
+         <p class="greenMark"></p>
+         <div>
+            You have 3 new followers
+         </div>
+      </div>
+      <p class="alert-list-close">X</p>
+   </li>
+   <li class="alertList">
+      <div class="mark-wrapper">
+         <p class="greenMark"></p>
+         <div>
+            Your password expires in 7 days
+         </div>
+      </div>
+      <p class="alert-list-close">X</p>
+   </li>
    </ul>
 `
-// alertBell.addEventListener('hover',e=>{
-//    console.log(alertBell);
-//    e.style.backgroundColor="blue";
-// })
+alertBell.addEventListener('click', e => {
+   alertNotification.style.display = "block";
+});
 
+alertNotification.addEventListener('mouseleave', e => {
+   alertNotification.style.display = "none";
+})
+
+const alertListMessage = document.getElementsByClassName("alertList");
+function alertBellListener() {
+   if (alertListMessage.length !== 0) {
+      for (let i = 0; i < alertListMessage.length; i++) {
+         alertListMessage[i].addEventListener('click', e => {
+            let element = e.target;
+            if (element.classList.contains("alert-list-close")) {
+               element.parentElement.style.display = "none";
+            }
+         })
+      }
+   } 
+}
+
+
+alertBellListener();

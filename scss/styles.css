@@ -1020,6 +1020,7 @@ main {
   width: 20px;
   height: 20px;
   line-height: 20px;
+  text-align: center;
   vertical-align: middle;
   border-radius: 50%;
   background-color: #b2b2b2;
@@ -1029,11 +1030,66 @@ main {
 }
 
 #notification {
-  width: 200px;
-  height: 200px;
-  background-color: #b2b2b2;
+  width: 280px;
+  background-color: lavender;
+  color: black;
   display: none;
   position: absolute;
+  right: 20px;
+  top: 65px;
   z-index: 1;
+}
+
+#notification .alertNav .alertList {
+  text-align: left;
+  padding: 15px 15px;
+  border: 1px solid #b2b2b2;
+  border-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#notification .alertNav .alertList .mark-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#notification .alertNav .alertList .mark-wrapper .greenMark {
+  width: 10px;
+  height: 10px;
+  line-height: 10px;
+  text-align: center;
+  margin: 5px 0;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color: #81c98f;
+}
+
+#notification .alertNav .alertList .alert-list-close {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #b2b2b2;
+}
+
+#notification .alertNav .alertList:last-child {
+  border-bottom: 1px solid #b2b2b2;
 }
 /*# sourceMappingURL=styles.css.map */
