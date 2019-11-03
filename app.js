@@ -224,31 +224,43 @@ alertBellListener();
 
 
 // Message User Widget
-// $(function () {
-//    var userName = [
-//       "Andrew",
-//       "Anna",
-//       "Bowen",
-//       "Caroline",
-//       "Cherk",
-//       "Esssi",
-//       "Fox",
-//       "God",
-//       "Hanna",
-//       "Jenny",
-//       "Jessi",
-//       "Leo",
-//       "Peter",
-//       "Photo",
-//       "Rio",
-//       "Selena",
-//       "Steven"
-//    ];
-//    $("#user").autocomplete({
-//       source: userName
-//    });
-// });
+$(function () {
+   var userName = [
+      "Andrew",
+      "Anna",
+      "Bowen",
+      "Caroline",
+      "Cherk",
+      "Esssi",
+      "Fox",
+      "God",
+      "Hanna",
+      "Jenny",
+      "Jessi",
+      "Leo",
+      "Peter",
+      "Photo",
+      "Rio",
+      "Selena",
+      "Steven"
+   ];
+   $("#user").autocomplete({
+      source: userName
+   });
+});
 const sendButton = document.getElementById('sbtButton');
 sendButton.addEventListener('click', e => {
-
+   e.preventDefault();
+   const name=document.getElementById('user').value;
+   const message=document.getElementById('messageBox').value;
+   const confirmdisplay=document.getElementById('confirmInfo');
+   if(name!=="" && message !==""){
+      confirmdisplay.style.display="block";
+      confirmdisplay.style.backgroundColor="#81c98f";
+      confirmdisplay.innerHTML=`<p>Your message is sent to ${name}</p>`;
+   }else if(name==""||message==""){
+      confirmdisplay.style.display="block";
+      confirmdisplay.style.backgroundColor="#7477bf";
+      confirmdisplay.innerHTML=`<p>User and messages are required!</p>`;
+   }
 });
