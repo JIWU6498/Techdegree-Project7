@@ -4,11 +4,11 @@
 .settings {
    padding: 10px 0;
    border-bottom: 0.8px solid #b2b2b2;
-   // @include media-query-m($break-m){
-   //    display: flex;
-   //    flex-direction: column;
-   //    align-content: flex-end;
-   // }
+   @include media-query-m($break-m){
+      display: flex;
+      flex-direction: column;
+      align-content: flex-end;
+   }
 
    h3 {
       @include h3-style;
@@ -22,7 +22,7 @@
 
    .overall-wrapper {
       padding: 20px auto 10px 20px;
-
+      margin-bottom:43px;
       .setting-wrapper {
          display: flex;
          flex-direction: row;
