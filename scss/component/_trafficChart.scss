@@ -29,7 +29,7 @@
             margin: 0 2.5px;
             font-size: 1.2em;
             font-weight: bold;
-
+           
             @include media-query-m($break-m) {
                float: right;
             }

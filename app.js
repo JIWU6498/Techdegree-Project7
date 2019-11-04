@@ -5,7 +5,7 @@ Chart.defaults.global.defaultFontSize = '14';
 // Line Traffic Chart
 let lineChart = document.getElementById('traffic-chart').getContext('2d');
 
-let lineChartData = {
+let weeklylineChartData = {
    labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
 
    datasets: [{
@@ -21,6 +21,53 @@ let lineChartData = {
    }],
 }
 
+let hourlylineChartData = {
+   labels: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
+
+   datasets: [{
+      data: [25, 30, 15, 35, 20, 45, 20, 15, 35, 15, 20],
+      backgroundColor: 'rgba(116,119,191,0.3)',
+      borderColor: 'rgba(116,119,191,1)',
+      borderWidth: 3,
+      lineTension: 0,
+      pointRadius: 6,
+      pointBorderColor: 'rgba(116,119,191,1)',
+      pointBackgroundColor: 'white',
+      pointBorderWidth: '3',
+   }],
+}
+
+let dailylineChartData = {
+   labels: ['Wed', 'Thu', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+
+   datasets: [{
+      data: [210, 320, 300, 180, 220, 420, 300, 250, 400, 350, 200],
+      backgroundColor: 'rgba(116,119,191,0.3)',
+      borderColor: 'rgba(116,119,191,1)',
+      borderWidth: 3,
+      lineTension: 0,
+      pointRadius: 6,
+      pointBorderColor: 'rgba(116,119,191,1)',
+      pointBackgroundColor: 'white',
+      pointBorderWidth: '3',
+   }],
+}
+
+let monthlylineChartData = {
+   labels: ['Jan', 'Feb', 'Mar', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov','Dec'],
+
+   datasets: [{
+      data: [2101, 3200, 3000, 1800, 2200, 4200, 3000, 2500, 4000, 3500, 2000,2300],
+      backgroundColor: 'rgba(116,119,191,0.3)',
+      borderColor: 'rgba(116,119,191,1)',
+      borderWidth: 3,
+      lineTension: 0,
+      pointRadius: 6,
+      pointBorderColor: 'rgba(116,119,191,1)',
+      pointBackgroundColor: 'white',
+      pointBorderWidth: '3',
+   }],
+}
 let lineChartOptions = {
    aspectRatio: 2.5,
    animation: {
@@ -54,9 +101,46 @@ let lineChartOptions = {
 
 let drawLineChart = new Chart(lineChart, {
    type: 'line',
-   data: lineChartData,
+   data: weeklylineChartData,
    options: lineChartOptions
 });
+
+const lineNav = document.getElementsByClassName("traffic-nav-link");
+function drawLineGraph() {
+   for (let i = 0; i < lineNav.length; i++) {
+      lineNav[i].addEventListener('click', e => {
+         let element = e.target;
+
+         if (element.textContent === "Hourly") {
+            drawLineChart = new Chart(lineChart, {
+               type: 'line',
+               data: hourlylineChartData,
+               options: lineChartOptions
+            });
+         } else if (element.textContent === "Daily") {
+            drawLineChart = new Chart(lineChart, {
+               type: 'line',
+               data: dailylineChartData,
+               options: lineChartOptions
+            });
+         } else if (element.textContent === "Weekly") {
+            drawLineChart = new Chart(lineChart, {
+               type: 'line',
+               data: weeklylineChartData,
+               options: lineChartOptions
+            });
+         }else{
+            drawLineChart = new Chart(lineChart, {
+               type: 'line',
+               data: monthlylineChartData,
+               options: lineChartOptions
+            });
+         }
+      })
+   }
+}
+
+drawLineGraph();
 
 //bar chart
 let barChart = document.getElementById('daily-chart').getContext('2d');
@@ -145,10 +229,10 @@ let drawPieChart = new Chart(pieChart, {
 });
 
 // Alert Banner
-const alert = document.getElementById('alert');
+const alertBanner = document.getElementById('alert');
 
 //create the html for the banner
-alert.innerHTML =
+alertBanner.innerHTML =
    `
    <div class="alert-banner">
    <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks
@@ -156,10 +240,10 @@ alert.innerHTML =
    <p class="alert-banner-close">x</p>
    </div>
    `
-alert.addEventListener('click', e => {
+alertBanner.addEventListener('click', e => {
    let element = e.target;
    if (element.classList.contains("alert-banner-close")) {
-      alert.style.display = "none";
+      alertBanner.style.display = "none";
    }
 });
 
@@ -251,16 +335,17 @@ $(function () {
 const sendButton = document.getElementById('sbtButton');
 sendButton.addEventListener('click', e => {
    e.preventDefault();
-   const name=document.getElementById('user').value;
-   const message=document.getElementById('messageBox').value;
-   const confirmdisplay=document.getElementById('confirmInfo');
-   if(name!=="" && message !==""){
-      confirmdisplay.style.display="block";
-      confirmdisplay.style.backgroundColor="#81c98f";
-      confirmdisplay.innerHTML=`<p>Your message is sent to ${name}</p>`;
-   }else if(name==""||message==""){
-      confirmdisplay.style.display="block";
-      confirmdisplay.style.backgroundColor="#7477bf";
-      confirmdisplay.innerHTML=`<p>User and messages are required!</p>`;
+   const name = document.getElementById('user').value;
+   const message = document.getElementById('messageBox').value;
+   const confirmdisplay = document.getElementById('confirmInfo');
+   if (name !== "" && message !== "") {
+      confirmdisplay.style.display = "block";
+      confirmdisplay.style.backgroundColor = "#81c98f";
+      confirmdisplay.innerHTML = `<p>Your message is sent to ${name}</p>`;
+   } else if (name == "" || message == "") {
+      confirmdisplay.style.display = "block";
+      confirmdisplay.style.backgroundColor = "#7477bf";
+      alert("Hwl");
+      confirmdisplay.innerHTML = `<p>User and messages are required!</p>`;
    }
 });
