@@ -1,7 +1,55 @@
+/* ============================================= */
+/*                Local Storage                  */
+/* ============================================= */
+
+const emailNotification=document.getElementById('myonoffswitch1');
+const profileToPublic=document.getElementById('myonoffswitch2');
+
+
+$('#myonoffswitch1').on('click',()=>{
+   const checkbox=$('#myonoffswitch1:checked').val();
+   if(checkbox==='on'){
+      localStorage.setItem("myonoffswitch1",'on');
+   }else{
+      localStorage.removeItem("myonoffswitch1");
+   }
+});
+
+if(localStorage.getItem("myonoffswitch1")==="on"){
+   emailNotification.checked=true;
+}
+
+$('#myonoffswitch2').on('click',()=>{
+   const checkbox=$('#myonoffswitch2:checked').val();
+   if(checkbox==='on'){
+      localStorage.setItem("myonoffswitch2",'on');
+   }else{
+      localStorage.removeItem("myonoffswitch2");
+   }
+});
+
+if(localStorage.getItem("myonoffswitch2")==="on"){
+   profileToPublic.checked=true;
+}
+
+$('#timezone').change(()=>{
+   localStorage.setItem('timezone',$('#timezone').val());
+});
+if(localStorage.getItem('timezone')){
+   $('#timezone').val(localStorage.getItem('timezone'));
+}
+
+/* ============================================= */
+/*                Google Chart.js                */
+/* ============================================= */
 //Set global font value
 Chart.defaults.global.defaultFontColor = '#b2b2b2';
 Chart.defaults.global.defaultFontFamily = "'Source Sans Pro', sans-serif";
 Chart.defaults.global.defaultFontSize = '14';
+Chart.defaults.global.tooltips.titleFontSize = 12;
+Chart.defaults.global.tooltips.bodyFontSize=10;
+Chart.defaults.global.tooltips.titleAlign='left';
+Chart.defaults.global.tooltips.xPadding=11;
 // Line Traffic Chart
 let lineChart = document.getElementById('traffic-chart').getContext('2d');
 
@@ -74,6 +122,7 @@ let lineChartOptions = {
       duration: 0
    },
    scales: {
+      maintainAspectRatio: false,
       yAxes: [{
          ticks: {
             beginAtZero: false,
@@ -160,6 +209,7 @@ let barChartData = {
 let barChartOptions = {
    scales: {
       yAxes: [{
+        
          ticks: {
             beginAtZero: true
          }
@@ -205,10 +255,10 @@ let pieChartData = {
 let pieChartOptions = {
    legend: {
       position: 'right',
-      labels: {
-         boxWidth: 20,
-         fontStyle: 'bold',
-      },
+      // labels: {
+      //    boxWidth: 20,
+      //    fontStyle: 'bold',
+      // },
    },
    layout: {
       padding: {
@@ -349,3 +399,5 @@ sendButton.addEventListener('click', e => {
       confirmdisplay.innerHTML = `<p>User and messages are required!</p>`;
    }
 });
+
+

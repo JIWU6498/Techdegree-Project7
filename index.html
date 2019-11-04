@@ -221,7 +221,7 @@
                         <h5 class="time">5 hours ago</h5>
                      </div>
                   </div>
-                
+
                </li>
                <li class="activity-list">
                   <div class="member-wrapper">
@@ -231,7 +231,7 @@
                         <h5 class="time">5 hours ago</h5>
                      </div>
                   </div>
-                
+
                </li>
                <li class="activity-list">
                   <div class="member-wrapper">
@@ -241,7 +241,7 @@
                         <h5 class="time">1 day ago</h5>
                      </div>
                   </div>
-                  
+
                </li>
             </ul>
          </section>
@@ -262,8 +262,7 @@
                <div class="setting-wrapper">
                   <h4>Send Email Notification</h4>
                   <div class="onoffswitch">
-                     <input type="checkbox" name="onoffswitch1" class="onoffswitch-checkbox1" id="myonoffswitch1"
-                        checked>
+                     <input type="checkbox" name="onoffswitch1" class="onoffswitch-checkbox1" id="myonoffswitch1">
                      <label class="onoffswitch-label" for="myonoffswitch1">
                         <span class="onoffswitch-inner"></span>
                         <span class="onoffswitch-switch"></span>
@@ -273,8 +272,7 @@
                <div class="setting-wrapper">
                   <h4>Set Profile to Public&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                   <div class="onoffswitch">
-                     <input type="checkbox" name="onoffswitch2" class="onoffswitch-checkbox2" id="myonoffswitch2"
-                        checked>
+                     <input type="checkbox" name="onoffswitch2" class="onoffswitch-checkbox2" id="myonoffswitch2">
                      <label class="onoffswitch-label" for="myonoffswitch2">
                         <span class="onoffswitch-inner"></span>
                         <span class="onoffswitch-switch"></span>
@@ -285,9 +283,11 @@
 
             <form class="">
                <select id="timezone" name="timezone" class="timezone ">
-                  <option value="">Select Timezone</option>
-                  <option value="PTC">8:00</option>
-                  <option value="UTC">7:00</option>
+                  <option value="0" selected="selected" hidden>Select Timezone</option>
+                  <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
+                  <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
+                  <option value="-10:00">(GMT -10:00) Hawaii</option>
+                  <option value="-09:50">(GMT -9:30) Taiohae</option>
                </select>
                <div class="button-wrapper">
                   <button id="save" type="submit">Save</button>
