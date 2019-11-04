@@ -27,7 +27,7 @@
       padding:20px;
       @include media-query-m($break-m) {
          width: 80%;
-         box-sizing: border-box;;
+         box-sizing: border-box;
          border-left: 0.8px solid #b2b2b2;
          border-bottom: 0.8px solid #b2b2b2;
          background-color: #fbfbfb;
@@ -35,6 +35,10 @@
 
       .searchBar {
          
+         padding-right:30px;
+         background-image: url("../icons/icon-magnify.svg");
+         background-repeat: no-repeat;
+         background-position: right;
          @include input-style;
 
          @include media-query-m($break-m) {
