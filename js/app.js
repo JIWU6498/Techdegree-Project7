@@ -401,11 +401,16 @@ sendButton.addEventListener('click', e => {
       confirmdisplay.style.display = "block";
       confirmdisplay.style.backgroundColor = "#81c98f";
       confirmdisplay.innerHTML = `<p>Your message is sent to ${name}</p>`;
-   } else if (name == "" || message == "") {
+      alert( `Message successfully sent to: ${name}` );
+   } else if (name == "" && message == "") {
       confirmdisplay.style.display = "block";
       confirmdisplay.style.backgroundColor = "#7477bf";
-      alert("Hwl");
+      alert( "Please fill out user and message fields before sending" );
       confirmdisplay.innerHTML = `<p>User and messages are required!</p>`;
+   }else if(name === ""){
+      alert( "Please fill out user field before sending" );
+   }else{
+      alert( "Please fill out message field before sending" );
    }
 });
 
