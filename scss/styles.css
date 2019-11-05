@@ -140,8 +140,8 @@ header .right-wrapper {
           justify-content: flex-end;
 }
 
-header .right-wrapper .setting::after {
-  content: '.';
+header .right-wrapper #setting:before {
+  content: attr(data-content);
   font-size: 4em;
   color: #81c98f;
   position: absolute;
@@ -150,13 +150,13 @@ header .right-wrapper .setting::after {
 }
 
 @media (min-width: 768px) {
-  header .right-wrapper .setting::after {
+  header .right-wrapper #setting:before {
     right: 9.3rem;
     top: -.4em;
   }
 }
 
-header .right-wrapper .setting .bell {
+header .right-wrapper #setting .bell {
   width: 30px;
   height: 30px;
   max-width: 100%;
@@ -165,7 +165,7 @@ header .right-wrapper .setting .bell {
   fill: white;
 }
 
-header .right-wrapper .setting .bell:hover {
+header .right-wrapper #setting .bell:hover {
   -webkit-transform: scale(1.1) rotate(5deg);
           transform: scale(1.1) rotate(5deg);
   -webkit-transform-origin: 50% 50%;

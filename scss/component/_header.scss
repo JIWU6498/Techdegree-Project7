@@ -22,21 +22,21 @@ header {
       flex-direction: row;
       justify-content: flex-end;
 
-      .setting {
-         
-         &::after{
-            content: '.';
+      #setting {
+
+         &:before {
+            content:attr(data-content);
             font-size: 4em;
             color: #81c98f;
             position: absolute;
-            top: -.42em; 
+            top: -.42em;
             right: 2.4em;
-        
-            @include media-query-m($break-m){
+
+            @include media-query-m($break-m) {
                right: 9.3rem;
                top: -.4em;
             }
-        }
+         }
 
          .bell {
             width: 30px;
@@ -44,7 +44,7 @@ header {
             max-width: 100%;
             margin: 25px 0;
             padding-right: 5px;
-           
+
             fill: white;
 
             &:hover {
@@ -54,7 +54,7 @@ header {
                transition: transform 1s ease-in-out;
             }
 
-            
+
          }
 
       }

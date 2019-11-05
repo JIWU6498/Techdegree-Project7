@@ -300,7 +300,8 @@ alertBanner.addEventListener('click', e => {
 //Alert Bell
 const alertNotification = document.getElementById('notification');
 const alertBell = document.getElementById('alertBell');
-
+const setting=document.getElementById("setting");
+console.log(setting);
 alertNotification.innerHTML = `
    <ul class="alertNav">
    <li class="alertList">
@@ -332,12 +333,17 @@ alertNotification.innerHTML = `
    </li>
    </ul>
 `
+
+
 alertBell.addEventListener('click', e => {
    alertNotification.style.display = "block";
-   document.querySelector(".setting:after").style.opacity=0;
+   setting.dataset.content='';
+   setTimeout(()=>{
+      setting.setAttribute('data-content','');
+   });
    
-   
-});
+},1000);
+
 
 alertNotification.addEventListener('mouseleave', e => {
    alertNotification.style.display = "none";
