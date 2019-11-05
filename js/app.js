@@ -334,6 +334,9 @@ alertNotification.innerHTML = `
 `
 alertBell.addEventListener('click', e => {
    alertNotification.style.display = "block";
+   document.querySelector(".setting:after").style.opacity=0;
+   
+   
 });
 
 alertNotification.addEventListener('mouseleave', e => {

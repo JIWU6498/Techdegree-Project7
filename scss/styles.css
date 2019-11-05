@@ -140,6 +140,22 @@ header .right-wrapper {
           justify-content: flex-end;
 }
 
+header .right-wrapper .setting::after {
+  content: '.';
+  font-size: 4em;
+  color: #81c98f;
+  position: absolute;
+  top: -.42em;
+  right: 2.4em;
+}
+
+@media (min-width: 768px) {
+  header .right-wrapper .setting::after {
+    right: 9.3rem;
+    top: -.4em;
+  }
+}
+
 header .right-wrapper .setting .bell {
   width: 30px;
   height: 30px;
