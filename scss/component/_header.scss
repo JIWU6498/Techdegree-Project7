@@ -30,18 +30,24 @@ header {
             max-width: 100%;
             margin: 25px 0;
             padding-right: 5px;
-            border-right: 1px solid #4d4c72;
+            // border-right: 1px solid #4d4c72;
             fill: white;
 
             &:hover {
-               transform: scaleX(1.1) scaleY(1.1);
+               transform: scale(1.1) rotate(5deg);
                transform-origin: 50% 50%;
                transform-origin: center center;
-               transition:transform 0.5s ease-in-out;
+               transition: transform 1s ease-in-out;
             }
          }
 
+      }
 
+      .border-line {
+         border-left: 1px solid #4d4c72;
+         width: 5px;
+         height: 30px;
+         margin: 30px 0;
       }
 
       .profile-avatar {

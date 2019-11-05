@@ -146,21 +146,27 @@ header .right-wrapper .setting .bell {
   max-width: 100%;
   margin: 25px 0;
   padding-right: 5px;
-  border-right: 1px solid #4d4c72;
   fill: white;
 }
 
 header .right-wrapper .setting .bell:hover {
-  -webkit-transform: scaleX(1.1) scaleY(1.1);
-          transform: scaleX(1.1) scaleY(1.1);
+  -webkit-transform: scale(1.1) rotate(5deg);
+          transform: scale(1.1) rotate(5deg);
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
   -webkit-transform-origin: center center;
           transform-origin: center center;
-  -webkit-transition: -webkit-transform 0.5s ease-in-out;
-  transition: -webkit-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+}
+
+header .right-wrapper .border-line {
+  border-left: 1px solid #4d4c72;
+  width: 5px;
+  height: 30px;
+  margin: 30px 0;
 }
 
 header .right-wrapper .profile-avatar {
